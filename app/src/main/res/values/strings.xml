@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lista de compras</string>
+    <string name="label_remenber">Não esquecer de</string>
+    <string name="description">Descrição</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_new">Criar lembrete</string>
+    <string name="label_text_remenber">O que não devo esquecer de levar para casa hoje...</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_check">Concluido</string>
+    <string name="label_empty">Crie seu lembrete para não deixar nada para trás.</string>
+    <string name="label_title_test">Tomate</string>
+</resources>
