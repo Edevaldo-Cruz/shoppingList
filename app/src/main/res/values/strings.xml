@@ -8,5 +8,7 @@
     <string name="label_edit">Editar</string>
     <string name="label_check">Concluido</string>
     <string name="label_empty">Crie seu lembrete para não deixar nada para trás.</string>
-    <string name="label_title_test">Tomate</string>
+
+    <string name="label_title">Lembrete</string>
+    <string name="label_delete">Deletar</string>
 </resources>

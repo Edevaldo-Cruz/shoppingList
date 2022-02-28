@@ -8,13 +8,13 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:navigationIcon="@drawable/ic_back"
-        app:title="Lembrete"
-        app:titleTextColor="@color/white" />
+        app:title="@string/label_title"
+        app:titleTextColor="@color/white"
+        style="@style/toolbarAdd" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_start"
@@ -32,11 +32,8 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_title"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:id="@+id/title"
+        style="@style/text_input"
         android:hint="@string/label_remenber"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toStartOf="@id/guide_start"
@@ -52,15 +49,13 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_description"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        style="@style/text_input"
         android:hint="@string/description"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guide_start"
-        app:layout_constraintTop_toBottomOf="@+id/til_title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -73,14 +68,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cancel"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="161dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="184dp"
-        android:layout_marginBottom="16dp"
+        style="@style/btn_cancel"
         android:text="@string/label_cancel"
-        android:textAllCaps="false"
-        android:textColor="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:rippleColor="@color/design_default_color_error"
@@ -88,13 +77,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_new_shopp"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="161dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginBottom="16dp"
+        style="@style/btn_add"
         android:text="@string/label_new"
-        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start" />
 

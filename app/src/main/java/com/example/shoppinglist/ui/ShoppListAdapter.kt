@@ -13,6 +13,7 @@ import com.example.shoppinglist.model.Shopp
 
 class ShoppListAdapter : ListAdapter<Shopp, ShoppListAdapter.ShoppViewHolder>(DifCallback()) {
 
+    var listenerConcluided : (Shopp) -> Unit = {}
     var listenerEdit : (Shopp) -> Unit = {}
     var listenerDelete : (Shopp) -> Unit = {}
 
@@ -29,18 +30,19 @@ class ShoppListAdapter : ListAdapter<Shopp, ShoppListAdapter.ShoppViewHolder>(Di
     inner class ShoppViewHolder(
         private val binding: ItemShoppBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Shopp) {
-            binding.tvTitle.text = item.title
-            binding.tvDescription.text = item.description
-            binding.ivMenu.setOnClickListener {
+            binding.cardTitle.text = item.title
+            binding.cardDescription.text = item.description
+            binding.cardMenu.setOnClickListener {
                 showPopup(item)
             }
         }
         private fun showPopup(item: Shopp) {
-            val ivMenu = binding.ivMenu
+            val ivMenu = binding.cardMenu
             val popupMenu = PopupMenu(ivMenu.context, ivMenu)
             popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener {
                 when (it.itemId) {
+                    R.id.action_concluded -> listenerConcluided(item)
                     R.id.action_edit -> listenerEdit(item)
                     R.id.action_delete -> listenerDelete(item)
                 }

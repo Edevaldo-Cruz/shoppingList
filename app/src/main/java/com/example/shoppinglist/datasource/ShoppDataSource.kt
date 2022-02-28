@@ -1,6 +1,8 @@
 package com.example.shoppinglist.datasource
 
+import androidx.core.content.ContextCompat
 import com.example.shoppinglist.model.Shopp
+
 
 object ShoppDataSource {
     private val list = arrayListOf<Shopp>()
@@ -21,6 +23,8 @@ object ShoppDataSource {
     fun deleteShopp(shopp: Shopp) {
         list.remove(shopp)
     }
+
+
 
 }
 
